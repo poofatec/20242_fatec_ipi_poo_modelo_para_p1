@@ -1,4 +1,3 @@
-
 import java.util.Random;
 
 public class Jogo {
@@ -30,10 +29,10 @@ public class Jogo {
                 System.out.println("Opcao invalida");
                 break;
             }
-
+            player.morrer();
             System.out.println(player); 
             System.out.println("******************************"); 
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         }
     }
 
