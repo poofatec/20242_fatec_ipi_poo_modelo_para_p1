@@ -59,12 +59,11 @@ public class Personagem {
     }
   }
 
-  boolean morrer() {
+  public boolean morrer() {
     if (energia <= 0) {
-      System.out.println(nome + " Ficou sem energia");
-      System.out.println("Game Over para o jogador: " + nome);
+      System.out.println(nome + " Ficou sem energia\n");
+      System.out.println("Game Over para o jogador: " + nome + "\n");
       morto = true;
-      return true;
     }
     return morto;
   }
@@ -72,6 +71,12 @@ public class Personagem {
   public boolean isMorto() {
     return morto;
   }
+
+  void atacar(Personagem inimigo){
+    System.out.println(nome + " Atacou!!! " + inimigo.nome + "\n");
+    inimigo.energia--;
+     if(inimigo.energia == 0) inimigo.morrer(); 
+  }  
 
   public String toString() {
     // nome: e:5, f:4, s:8
